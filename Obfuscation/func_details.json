@@ -1,0 +1,333 @@
+{
+    "GetForegroundWindow": {
+        "dll": "User32.dll",
+        "returnType": "HWND",
+        "funcName": "GetForegroundWindow",
+        "params": []
+    },
+    "GetWindowText": {
+        "dll": "User32.dll",
+        "returnType": "int",
+        "funcName": "GetWindowTextA",
+        "params": [
+            "HWND",
+            "hWnd,",
+            "LPSTR",
+            "lpString,",
+            "int",
+            "nMaxCount"
+        ]
+    },
+    "CallNextHookEx": {
+        "dll": "User32.dll",
+        "returnType": "LRESULT",
+        "funcName": "CallNextHookEx",
+        "params": [
+            "HHOOK",
+            "hhk,",
+            "int",
+            "nCode,",
+            "WPARAM",
+            "wParam,",
+            "LPARAM",
+            "lParam"
+        ]
+    },
+    "AddClipboardFormatListener": {
+        "dll": "User32.dll",
+        "returnType": "BOOL",
+        "funcName": "AddClipboardFormatListener",
+        "params": [
+            "HWND",
+            "hwnd"
+        ]
+    },
+    "RemoveClipboardFormatListener": {
+        "dll": "User32.dll",
+        "returnType": "BOOL",
+        "funcName": "RemoveClipboardFormatListener",
+        "params": [
+            "HWND",
+            "hwnd"
+        ]
+    },
+    "CloseClipboard": {
+        "dll": "User32.dll",
+        "returnType": "BOOL",
+        "funcName": "CloseClipboard",
+        "params": []
+    },
+    "SetWindowsHookExW": {
+        "dll": "User32.dll",
+        "returnType": "HHOOK",
+        "funcName": "SetWindowsHookExW",
+        "params": [
+            "int",
+            "idHook,",
+            "HOOKPROC",
+            "lpfn,",
+            "HINSTANCE",
+            "hmod,",
+            "DWORD",
+            "dwThreadId"
+        ]
+    },
+    "DeleteFileA": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "DeleteFileA",
+        "params": [
+            "LPCSTR",
+            "lpFileName"
+        ]
+    },
+    "CreatePipe": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "CreatePipe",
+        "params": [
+            "PHANDLE",
+            "hReadPipe,",
+            "PHANDLE",
+            "hWritePipe,",
+            "LPSECURITY_ATTRIBUTES",
+            "lpPipeAttributes,",
+            "DWORD",
+            "nSize"
+        ]
+    },
+    "SetHandleInformation": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "SetHandleInformation",
+        "params": [
+            "HANDLE",
+            "hObject,",
+            "DWORD",
+            "dwMask,",
+            "DWORD",
+            "dwFlags"
+        ]
+    },
+    "CloseHandle": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "CloseHandle",
+        "params": [
+            "HANDLE",
+            "hObject"
+        ]
+    },
+    "CreateToolhelp32Snapshot": {
+        "dll": "Kernel32.dll",
+        "returnType": "HANDLE",
+        "funcName": "CreateToolhelp32Snapshot",
+        "params": [
+            "DWORD",
+            "dwFlags,",
+            "DWORD",
+            "th32ProcessID"
+        ]
+    },
+    "Process32First": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "Process32First",
+        "params": [
+            "HANDLE",
+            "hSnapshot,",
+            "LPPROCESSENTRY32",
+            "lppe"
+        ]
+    },
+    "Process32Next": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "Process32Next",
+        "params": [
+            "HANDLE",
+            "hSnapshot,",
+            "LPPROCESSENTRY32",
+            "lppe"
+        ]
+    },
+    "TerminateProcess": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "TerminateProcess",
+        "params": [
+            "HANDLE",
+            "hProcess,",
+            "UINT",
+            "uExitCode"
+        ]
+    },
+    "GetComputerNameA": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "GetComputerNameA",
+        "params": [
+            "LPSTR",
+            "lpBuffer,",
+            "LPDWORD",
+            "nSize"
+        ]
+    },
+    "GetUserNameA": {
+        "dll": "Advapi32.dll",
+        "returnType": "BOOL",
+        "funcName": "GetUserNameA",
+        "params": [
+            "LPSTR",
+            "lpBuffer,",
+            "LPDWORD",
+            "pcbBuffer"
+        ]
+    },
+    "GetVersionExA": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "GetVersionExA",
+        "params": [
+            "LPOSVERSIONINFOA",
+            "lpVersionInformation"
+        ]
+    },
+    "GetModuleFileNameA": {
+        "dll": "Kernel32.dll",
+        "returnType": "DWORD",
+        "funcName": "GetModuleFileNameA",
+        "params": [
+            "HMODULE",
+            "hModule,",
+            "LPSTR",
+            "lpFilename,",
+            "DWORD",
+            "nSize"
+        ]
+    },
+    "WSAStartup": {
+        "dll": "Ws2_32.dll",
+        "returnType": "int",
+        "funcName": "WSAStartup",
+        "params": [
+            "WORD",
+            "wVersionRequested,",
+            "LPWSADATA",
+            "lpWSAData"
+        ]
+    },
+    "WSASocket": {
+        "dll": "Ws2_32.dll",
+        "returnType": "SOCKET",
+        "funcName": "WSASocketA",
+        "params": [
+            "int",
+            "af,",
+            "int",
+            "type,",
+            "int",
+            "protocol,",
+            "LPWSAPROTOCOL_INFOA",
+            "lpProtocolInfo,",
+            "GROUP",
+            "g,",
+            "DWORD",
+            "dwFlags"
+        ]
+    },
+    "WSAConnect": {
+        "dll": "Ws2_32.dll",
+        "returnType": "int",
+        "funcName": "WSAConnect",
+        "params": [
+            "SOCKET",
+            "s,",
+            "const",
+            "sockaddr",
+            "*name,",
+            "int",
+            "namelen,",
+            "LPWSABUF",
+            "lpCallerData,",
+            "LPWSABUF",
+            "lpCalleeData,",
+            "LPQOS",
+            "lpSQOS,",
+            "LPQOS",
+            "lpGQOS"
+        ]
+    },
+    "CreateProcessW": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "CreateProcessW",
+        "params": [
+            "LPCWSTR",
+            "lpApplicationName,",
+            "LPWSTR",
+            "lpCommandLine,",
+            "LPSECURITY_ATTRIBUTES",
+            "lpProcessAttributes,",
+            "LPSECURITY_ATTRIBUTES",
+            "lpThreadAttributes,",
+            "BOOL",
+            "bInheritHandles,",
+            "DWORD",
+            "dwCreationFlags,",
+            "LPVOID",
+            "lpEnvironment,",
+            "LPCWSTR",
+            "lpCurrentDirectory,",
+            "LPSTARTUPINFOW",
+            "lpStartupInfo,",
+            "LPPROCESS_INFORMATION",
+            "lpProcessInformation"
+        ]
+    },
+    "CreateProcessA": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "CreateProcessA",
+        "params": [
+            "LPCSTR",
+            "lpApplicationName,",
+            "LPSTR",
+            "lpCommandLine,",
+            "LPSECURITY_ATTRIBUTES",
+            "lpProcessAttributes,",
+            "LPSECURITY_ATTRIBUTES",
+            "lpThreadAttributes,",
+            "BOOL",
+            "bInheritHandles,",
+            "DWORD",
+            "dwCreationFlags,",
+            "LPVOID",
+            "lpEnvironment,",
+            "LPCSTR",
+            "lpCurrentDirectory,",
+            "LPSTARTUPINFOA",
+            "lpStartupInfo,",
+            "LPPROCESS_INFORMATION",
+            "lpProcessInformation"
+        ]
+    },
+    "GetVersionEx": {
+        "dll": "Kernel32.dll",
+        "returnType": "BOOL",
+        "funcName": "GetVersionExA",
+        "params": [
+            "LPOSVERSIONINFOA",
+            "lpVersionInformation"
+        ]
+    },
+    "UnhookWindowsHookEx": {
+        "dll": "User32.dll",
+        "returnType": "BOOL",
+        "funcName": "UnhookWindowsHookEx",
+        "params": [
+            "HHOOK",
+            "hhk"
+        ]
+    }
+}

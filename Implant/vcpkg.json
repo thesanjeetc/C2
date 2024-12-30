@@ -1,0 +1,5 @@
+{
+	"name":"implant",
+	"version":"0.0.1",
+	"dependencies":["nlohmann-json","socket-io-client", "cryptopp"]
+}
